@@ -9,16 +9,19 @@ function getRandomHexColor() {
 
 const StatItem = ({ id, label, percentage }) => {
 
-    return ( <li className={css.item} key={id} style= {{ backgroundColor: getRandomHexColor() }}>
-                <span className={css.statisticsLabel}>{label}</span>
-                <span className={css.percentage}>{percentage}%</span>
-            </li>)
+    return (<li className={css.item} key={id} style={{ backgroundColor: getRandomHexColor() }}>
+        <span className={css.statisticsLabel}>{label}</span>
+        <span className={css.percentage}>{percentage}%</span>
+    </li>);
 };
 
-StatItem.propTypes = PropTypes.exact({
+
+StatItem.propTypes = {
+    statistic: PropTypes.exact({
     id: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
     percentage: PropTypes.number.isRequired,
-},);
+    })
+};
 
 export default StatItem;

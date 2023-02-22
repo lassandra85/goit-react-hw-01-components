@@ -3,14 +3,13 @@ import css from '../FriendList/FriendList.module.css';
 
 import FriendListItem from "../FriendListItem/FriendListItem";
 
-const FriendList = (friendList) => {
+export const FriendList = ({friendList}) => {
     return (<ul className={css.friendList}>
         {friendList.map(friend => (
-            <FriendListItem id = {friend.id} avatarFriend={friend.avatarFriend} nameFriend={friend.nameFriend} isOnline={friend.isOnline} />
+            <FriendListItem id = {friend.id} avatarFriend = {friend.avatarFriend} nameFriend = {friend.nameFriend} isOnline = {friend.isOnline} />
         ),)}
             </ul>);
 };
-
 
 FriendList.propTypes = {
   friendList: PropTypes.arrayOf(
@@ -24,6 +23,5 @@ FriendList.propTypes = {
 }; 
 
 
-export default FriendList;
 
  

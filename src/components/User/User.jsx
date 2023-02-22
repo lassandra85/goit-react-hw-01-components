@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import css from './User.module.css';
 
-export default function Profile({ username, tag, location, avatar, stats}) {
+export function Profile({ username, tag, location, avatar, stats}) {
     return (
         <div className = {css.profile}>
             <div className = {css.description}>
@@ -18,13 +18,13 @@ export default function Profile({ username, tag, location, avatar, stats}) {
            <ul className={css.stats}>
             <li className={css.stat}>
                 <span className={css.label}>followers</span>
-            <span className={css.quantity}>{stats.followers}</span>
+                <span className={css.quantity}>{stats.followers}</span>
             </li>
-            <li>
+            <li className={css.stat}>
                 <span className={css.label}>views</span>
                 <span className={css.quantity}>{stats.views}</span>
             </li>
-            <li>
+            <li className={css.stat}>
                 <span className={css.label}>likes</span>
                 <span className={css.quantity}>{stats.likes}</span>
             </li>

@@ -2,10 +2,10 @@ import PropTypes from "prop-types";
 import StatItem from "../StatItem/StatItem";
 import css from "../Stats/Statistics.module.css";
 
-const Statistics = (title, statistics) => {
+export const Statistics = ({statistics}) => {
   return (
     <section className={css.statistics}>
-      {title} && <h2 className={css.title}>{title}</h2>
+      <h2 className={css.title}>Upload stats</h2>
 
       <ul className = {css.statisticsList} >
         {statistics.map(statistic => (
@@ -27,4 +27,4 @@ Statistics.propTypes = {
   ),
 };
 
-export default Statistics;
+
