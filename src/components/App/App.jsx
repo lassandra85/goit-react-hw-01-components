@@ -4,10 +4,10 @@ import user from 'data/user';
 import {Statistics} from '../Statistics/Stats/Statistics';
 import statistics from 'data/statistics';
 
-import {FriendList} from '../FriendList/FriendList/FriendList';
+import {FriendList} from '../FriendList/FriendList/FriendList.jsx';
 import friends from 'data/friends';
 
-import { Transations } from '../TransationsHistory/TransationsHistory';
+import {TransationsHistory} from '../TransationsHistory/TransationsHistory.jsx';
 import transations from 'data/transations';
 
 export const App = () => {
@@ -28,10 +28,10 @@ export const App = () => {
       />
 
       <FriendList
-        friendList = {friends}
+        friends = {friends}
       />
-
-      <Transations
+        
+      <TransationsHistory
         items={transations}
       />
 

@@ -1,17 +1,17 @@
 import PropTypes from 'prop-types';
 import {
-  Transacrions,
+  Transations,
   TableHeader,
   HeaderRow,
   HeaderTitle,
   TableBody,
   BodyRow,
   BodyValue,
-} from './TransactionHistory.styled';
+} from './TransationsHistory';
 
-export const TransactionsHistory = ({ items }) => {
+export const TransationsHistory = ({ items }) => {
   return (
-    <Transacrions>
+    <Transations>
       <TableHeader>
         <HeaderRow>
           <HeaderTitle>Type</HeaderTitle>
@@ -31,11 +31,11 @@ export const TransactionsHistory = ({ items }) => {
           );
         })}
       </TableBody>
-    </Transacrions>
+    </Transations>
   );
 };
 
-TransactionsHistory.propTypes = {
+TransationsHistory.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
