@@ -7,21 +7,14 @@ import statistics from 'data/statistics';
 import {FriendList} from '../FriendList/FriendList/FriendList';
 import friends from 'data/friends';
 
-import { TransationsHistory } from '../TransationsHistory/TransationsHistory';
+import { Transations } from '../TransationsHistory/TransationsHistory';
 import transations from 'data/transations';
 
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    > <Profile
+    <div>
+      
+      <Profile
         username = {user.username}
         tag = {user.tag}
         location = {user.location}
@@ -38,10 +31,11 @@ export const App = () => {
         friendList = {friends}
       />
 
-
-      <TransationsHistory
+      <Transations
         items={transations}
       />
+
+
     </div>
   );
 };

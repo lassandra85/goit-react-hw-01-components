@@ -5,9 +5,9 @@ import FriendListItem from "../FriendListItem/FriendListItem";
 
 export const FriendList = ({friendList}) => {
     return (<ul className={css.friendList}>
-        {friendList.map(friend => (
-            <FriendListItem id = {friend.id} avatarFriend = {friend.avatarFriend} nameFriend = {friend.nameFriend} isOnline = {friend.isOnline} />
-        ),)}
+              {friendList.map(friend => (
+              <FriendListItem id = {friend.id} avatarFriend = {friend.avatarFriend} nameFriend = {friend.nameFriend} isOnline = {friend.isOnline} />
+               ),)}
             </ul>);
 };
 
